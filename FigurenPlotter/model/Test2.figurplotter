@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<figurplotter:Plotter xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:figurplotter="http://www.example.org/figurplotter" canvasLength="500" canvasWidth="500">
+  <figures xsi:type="figurplotter:Line" name="firstLine" color="00cc2c" lenght="50.0">
+    <center xPos="50.0" yPos="50.0"/>
+  </figures>
+  <figures xsi:type="figurplotter:Circle" name="testCircle" radius="25.0">
+    <center xPos="75.0" yPos="75.0"/>
+  </figures>
+</figurplotter:Plotter>

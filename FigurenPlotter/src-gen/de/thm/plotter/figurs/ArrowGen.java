@@ -1,0 +1,158 @@
+package de.thm.plotter.figurs;
+
+import java.lang.String;
+import java.util.ArrayList;
+
+import de.thm.plotter.figurimpl.*;
+
+/**
+* This is the {@link Arrow} figurs class.
+*
+*@generated
+*/
+public abstract class ArrowGen extends Figur {
+
+	// attributes
+	private String name;
+	private String color;
+	private boolean filled;
+	private int strokeWeight;
+	private int degree;
+	private boolean displayName;
+	private double lenght;
+	private boolean arrowheadRight;
+	private boolean arrowheadLeft;
+
+	// references
+	private Point center;
+	private ArrayList<Figur> figures;
+
+	/**
+	* Default constructor.
+	*/
+	public ArrowGen() {
+	}
+
+	/**
+	* Constructor for all attributes.
+	*/
+	public ArrowGen(String name, String color, boolean filled, int strokeWeight, int degree, boolean displayName,
+			double lenght, boolean arrowheadRight, boolean arrowheadLeft) {
+		this.name = name;
+		this.color = color;
+		this.filled = filled;
+		this.strokeWeight = strokeWeight;
+		this.degree = degree;
+		this.displayName = displayName;
+		this.lenght = lenght;
+		this.arrowheadRight = arrowheadRight;
+		this.arrowheadLeft = arrowheadLeft;
+	}
+
+	/**
+	* Full constructor.
+	*/
+	public ArrowGen(String name, String color, boolean filled, int strokeWeight, int degree, boolean displayName,
+			double lenght, boolean arrowheadRight, boolean arrowheadLeft, Point center, ArrayList<Figur> figures) {
+		this.name = name;
+		this.color = color;
+		this.filled = filled;
+		this.strokeWeight = strokeWeight;
+		this.degree = degree;
+		this.displayName = displayName;
+		this.lenght = lenght;
+		this.arrowheadRight = arrowheadRight;
+		this.arrowheadLeft = arrowheadLeft;
+		this.center = center;
+		this.figures = figures;
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String Name) {
+		this.name = Name;
+	}
+
+	public String getColor() {
+		return this.color;
+	}
+
+	public void setColor(String Color) {
+		this.color = Color;
+	}
+
+	public boolean getFilled() {
+		return this.filled;
+	}
+
+	public void setFilled(boolean Filled) {
+		this.filled = Filled;
+	}
+
+	public int getStrokeWeight() {
+		return this.strokeWeight;
+	}
+
+	public void setStrokeWeight(int StrokeWeight) {
+		this.strokeWeight = StrokeWeight;
+	}
+
+	public int getDegree() {
+		return this.degree;
+	}
+
+	public void setDegree(int Degree) {
+		this.degree = Degree;
+	}
+
+	public boolean getDisplayName() {
+		return this.displayName;
+	}
+
+	public void setDisplayName(boolean DisplayName) {
+		this.displayName = DisplayName;
+	}
+
+	public double getLenght() {
+		return this.lenght;
+	}
+
+	public void setLenght(double Lenght) {
+		this.lenght = Lenght;
+	}
+
+	public boolean getArrowheadRight() {
+		return this.arrowheadRight;
+	}
+
+	public void setArrowheadRight(boolean ArrowheadRight) {
+		this.arrowheadRight = ArrowheadRight;
+	}
+
+	public boolean getArrowheadLeft() {
+		return this.arrowheadLeft;
+	}
+
+	public void setArrowheadLeft(boolean ArrowheadLeft) {
+		this.arrowheadLeft = ArrowheadLeft;
+	}
+
+	public Point getCenter() {
+		return this.center;
+	}
+
+	public void setCenter(Point Center) {
+		this.center = Center;
+	}
+
+	public ArrayList<Figur> getFigures() {
+		return this.figures;
+	}
+
+	public void setFigures(ArrayList<Figur> Figures) {
+		this.figures = Figures;
+	}
+
+}
