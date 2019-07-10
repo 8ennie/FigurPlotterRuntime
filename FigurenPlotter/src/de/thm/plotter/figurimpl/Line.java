@@ -8,13 +8,13 @@ import de.thm.plotter.util.EinheitsKreis;
 import processing.core.PApplet;
 
 /**
- * @author Admin
- * @see <a href="https://github.com/SirMoM/FigurenPlotterBase">Github</a>
+ * @author Noah Ruben, Benjamin
+ *
  */
 public class Line extends LineGen {
 
-	final Point A;
-	final Point B;
+	final protected Point A;
+	final protected Point B;
 	/**
 	 * @param sketch
 	 * @param name
@@ -24,12 +24,10 @@ public class Line extends LineGen {
 	 * @param degree
 	 * @param center
 	 */
-	public Line(final PApplet sketch, final String name, final String color, final boolean filled, final int strokeWeight, final int degree, final Point center, final double lenght,final boolean displayName) {
+	public Line(final String name, final String color, final boolean filled, final int strokeWeight, final int degree, final boolean displayName, final double lenght, final Point center, Figur figur) {
 		super(name, color,filled,strokeWeight,degree,displayName,lenght,center,null);
 		this.A = center.move(EinheitsKreis.berechnePositionAufKreis(degree, this.getLenght() / 2));
 		this.B = center.move(EinheitsKreis.berechnePositionAufKreis(degree + 180, this.getLenght() / 2));
-		System.out.println("A: " + this.A + " B: " + this.B);
-		this.setSketch(sketch);
 	}
 
 	/*
@@ -37,11 +35,10 @@ public class Line extends LineGen {
 	 *
 	 * @see figurenbase.Figur#show()
 	 */
-
-	public void show() {
-		super.setDisplayConfig();
-		this.getSketch().line((float) this.A.getXPos(), (float) this.A.getYPos(), (float) this.B.getXPos(), (float) this.B.getYPos());
-		super.resetDisplayConfig();
+	public void show(final PApplet sketch) {
+		super.setDisplayConfig(sketch);
+		sketch.line((float) this.A.getXPos(), (float) this.A.getYPos(), (float) this.B.getXPos(), (float) this.B.getYPos());
+		super.resetDisplayConfig(sketch);
 	}
 
 }

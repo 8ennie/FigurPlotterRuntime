@@ -7,7 +7,7 @@ import de.thm.plotter.figurs.CircleGen;
 import processing.core.PApplet;
 
 /**
- * @author Student
+ * @author Noah Ruben, Benjamin
  *
  */
 public class Circle extends CircleGen {
@@ -27,7 +27,6 @@ public class Circle extends CircleGen {
 	public Circle(PApplet sketch, String name, String color, boolean filled, int strokeWeight, int degree, Point center, double radius, boolean displayName) {
 		super(name, color, filled, strokeWeight, degree, displayName,radius,center,null);
 		this.radius = radius;
-		this.setSketch(sketch);
 	}
 
 	/*
@@ -36,12 +35,9 @@ public class Circle extends CircleGen {
 	 * @see figurenbase.Figur#show()
 	 */
 	@Override
-	public void show() {
-		super.setDisplayConfig();
-		System.out.println(radius);
-		System.out.println(getCenter());
-		getSketch().ellipse((float) getCenter().getXPos(), (float) getCenter().getYPos(), (float) radius, (float) radius);
-		super.resetDisplayConfig();
+	public void show(PApplet sketch) {
+		super.setDisplayConfig(sketch);
+		sketch.ellipse((float) getCenter().getXPos(), (float) getCenter().getYPos(), (float) radius, (float) radius);
+		super.resetDisplayConfig(sketch);
 	}
-
 }

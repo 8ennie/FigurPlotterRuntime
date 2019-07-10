@@ -3,8 +3,8 @@ package de.thm.plotter.figurimpl;
 import de.thm.plotter.figurs.PointGen;
 
 /**
- * @author Noah Ruben
- * @see <a href="https://github.com/SirMoM/FigurenPlotterBase">Github</a>
+ * @author Noah Ruben, Benjamin
+ *
  */
 public class Point extends PointGen{
 
@@ -13,11 +13,18 @@ public class Point extends PointGen{
 	 * @param yPos Y-Position of the point on the canvas
 	 */
 	public Point(final double xPos, final double yPos){
-		super(xPos, yPos);
+		this.setXPos(xPos);
+		this.setYPos(yPos);
 	}
 
-	public Point move(final Point p){
-		return new Point(this.getXPos() + p.getXPos(), this.getYPos() + p.getYPos());
+	/**
+	 * Treats the incoming Point as a Vector and creates a new Point an the new Position 
+	 * 
+	 * @param vector the "Vector" disguised as a Point 
+	 * @return a new Point moved by a Vector
+	 */
+	public Point move(final Point vector){
+		return new Point(this.getXPos() + vector.getXPos(), this.getYPos() + vector.getYPos());
 	}
 
 	/*
