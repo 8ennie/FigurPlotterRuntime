@@ -27,14 +27,10 @@ public abstract class Figur extends FigurGen {
 			Point center, ArrayList<Figur> figures) {
 		super(name, color, filled, strokeWeight, degree, displayName, center, figures);
 	}
-	
 
-	
 	public Figur() {
 		super();
 	}
-
-
 
 	/**
 	 * This show the Figur on the Processing-App
@@ -44,7 +40,8 @@ public abstract class Figur extends FigurGen {
 	abstract public void show(PApplet sketch);
 
 	/**
-	 * This Method set all the figure special configs for displaying it on screen<p>
+	 * This Method set all the figure special configs for displaying it on screen
+	 * <p>
 	 * This needs to be called before show is called.
 	 * 
 	 * @param sketch the processing App on which it is displayed
@@ -57,7 +54,6 @@ public abstract class Figur extends FigurGen {
 			} else {
 				colorInt = PApplet.unhex(this.getColor());
 			}
-			System.out.println(colorInt);
 			sketch.fill(colorInt);
 			if (!getFilled()) {
 				sketch.stroke(colorInt);
@@ -69,8 +65,8 @@ public abstract class Figur extends FigurGen {
 	}
 
 	/**
-	 * This Method resets all the figure special configs which could have been changed
-	 * THis needs to be called after show is called.
+	 * This Method resets all the figure special configs which could have been
+	 * changed THis needs to be called after show is called.
 	 * 
 	 * @param sketch the processing App on which it is displayed
 	 */

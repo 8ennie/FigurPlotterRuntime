@@ -6,4 +6,19 @@
   <figures xsi:type="figurplotter:Circle" name="testCircle" radius="25.0">
     <center xPos="75.0" yPos="75.0"/>
   </figures>
+  <figures xsi:type="figurplotter:Arrow" name="firstArrow" filled="true" strokeWeight="10" degree="45" lenght="100.0" arrowheadRight="true" arrowheadLeft="true">
+    <center xPos="175.0" yPos="75.0"/>
+  </figures>
+  <figures xsi:type="figurplotter:Rectangle" name="myRect" color="FF00cc99" strokeWeight="2" degree="90" sizeA="50.0" sizeB="100.0">
+    <center xPos="100.0" yPos="200.0"/>
+  </figures>
+  <figures xsi:type="figurplotter:Square" name="mySquare" color="FF77cc2c" degree="-60" sizeA="33.0">
+    <center xPos="30.0" yPos="333.0"/>
+  </figures>
+  <figures xsi:type="figurplotter:Polygon" name="triangle" color="FF00FFFF" degree="100" radius="50.0" numberOfVertices="3">
+    <center xPos="250.0" yPos="175.0"/>
+  </figures>
+  <figures xsi:type="figurplotter:Polygon" name="sechseck" filled="true" radius="100.0" numberOfVertices="6">
+    <center xPos="300.0" yPos="300.0"/>
+  </figures>
 </figurplotter:Plotter>

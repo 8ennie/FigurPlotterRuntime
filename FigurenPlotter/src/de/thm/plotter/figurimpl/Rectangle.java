@@ -28,6 +28,28 @@ public class Rectangle extends RectangleGen {
 		super(name, color, filled, strokeWeight, degree, displayName, sizeA, sizeB, center, figures);
 	}
 
+	/**
+	 * @param name
+	 * @param color
+	 * @param filled
+	 * @param strokeWeight
+	 * @param degree
+	 * @param displayName
+	 * @param center
+	 * @param sizeA
+	 * @param sizeB
+	 * @param figures
+	 */
+	public Rectangle(String name, String color, boolean filled, int strokeWeight, int degree, boolean displayName,
+			Point center, double sizeA, double sizeB, ArrayList<Figur> figures) {
+		super(name, color, filled, strokeWeight, degree, displayName, sizeA, sizeB, center, figures);
+	}
+
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see figurenbase.Figur#show()
+	 */
 	@Override
 	public void show(PApplet sketch) {
 		super.setDisplayConfig(sketch);

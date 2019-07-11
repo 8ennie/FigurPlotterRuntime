@@ -18,8 +18,42 @@ public class Arrow extends ArrowGen {
 	float coeff = 1.5f;
 	float headSize = 5;
 
+	/**
+	 * @param name
+	 * @param color
+	 * @param filled
+	 * @param strokeWeight
+	 * @param degree
+	 * @param displayName
+	 * @param lenght
+	 * @param arrowheadRight
+	 * @param arrowheadLeft
+	 * @param center
+	 * @param figures
+	 */
 	public Arrow(String name, String color, boolean filled, int strokeWeight, int degree, boolean displayName,
 			double lenght, boolean arrowheadRight, boolean arrowheadLeft, Point center, ArrayList<Figur> figures) {
+		super(name, color, filled, strokeWeight, degree, displayName, lenght, arrowheadRight, arrowheadLeft, center,
+				figures);
+		A = center.move(EinheitsKreis.berechnePositionAufKreis(degree, getLenght() / 2));
+		B = center.move(EinheitsKreis.berechnePositionAufKreis(degree + 180, getLenght() / 2));
+	}
+
+	/**
+	 * @param name
+	 * @param color
+	 * @param filled
+	 * @param strokeWeight
+	 * @param degree
+	 * @param displayName
+	 * @param center
+	 * @param lenght
+	 * @param arrowheadRight
+	 * @param arrowheadLeft
+	 * @param figures
+	 */
+	public Arrow(String name, String color, boolean filled, int strokeWeight, int degree, boolean displayName,
+			Point center, double lenght, boolean arrowheadRight, boolean arrowheadLeft, ArrayList<Figur> figures) {
 		super(name, color, filled, strokeWeight, degree, displayName, lenght, arrowheadRight, arrowheadLeft, center,
 				figures);
 		A = center.move(EinheitsKreis.berechnePositionAufKreis(degree, getLenght() / 2));
@@ -39,6 +73,9 @@ public class Arrow extends ArrowGen {
 		final float y1 = (float) B.getYPos();
 
 		final int angle = getDegree();
+
+		sketch.line((float) this.A.getXPos(), (float) this.A.getYPos(), (float) this.B.getXPos(),
+				(float) this.B.getYPos());
 
 		if (getFilled()) {
 			// begin head
